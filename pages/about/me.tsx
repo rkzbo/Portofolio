@@ -28,19 +28,12 @@ export default function AboutIndex() {
   //content utama hello/world - content utama ditulis
   return (
     <>
-      <p>Hello {username}</p>
-      <p>Cah {hometown}</p>
-      <ul>
-        <li>
-          <p>Hello Page #1</p>
-        </li>
-        <li>
-          <ContentAbout>#2</ContentAbout>
-        </li>
-        <li>
-          <ContentAbout>#3</ContentAbout>
-        </li>
-      </ul>
+      <table>
+        <tr>
+          <td>Coloumn 1</td>
+          <td>Coloumn 2</td>
+        </tr>
+      </table>
     </>
   );
 }

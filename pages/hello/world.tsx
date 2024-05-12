@@ -1,10 +1,17 @@
 import { useEffect, useState } from 'react'; //buat ngasih tau nodejs kalau ngambil fungsi useEffet & useState di react
 
 type ContentHelloProperties = {
-  children: string;
-}; // tipe data properties - ini adalah custom type
+  children: string; ////keyname:tipedata
+}; // tipe data properties - ini adalah custom type -- kalau dibuka dan tutup pakai buka kurung "{}" namanya object
+
+type Biodata = {
+  nama: string; //keyname:tipedata
+  tanggalLahir: string;
+  tempatLahir: string;
+};
 
 function ContentHello(properties: ContentHelloProperties) {
+  // <-- parameter fungsi, properties itu nama parameternya
   return <p>Hello Page {properties.children}</p>; //fungsi react component
 } //contentHello ini punya children yang bisa dipanggil
 
@@ -14,8 +21,8 @@ function ContentHello(properties: ContentHelloProperties) {
 //                                   V                                                                             |
 // background thread  ---->  useEffect (fetch) ----------------------------------------------------> setName, setSchools
 
-export default function HelloIndex() {
-  const [name, setName] = useState(''); // pendekatan asynchronous
+export default function HelloIndex(): JSX.Element {
+  const [name, setName] = useState(''); // pendekatan asynchronous     // value & setter
   const [schools, setSchools] = useState([]); //cara kita deklarasi variable //const = constant
 
   // panggil API bisa pake useEffect / useLayoutEffect
